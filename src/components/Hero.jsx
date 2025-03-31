@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
 
 function Hero() {
   return (
-    <div class="w-full h-52">
-        <div class="w-52 h-52 object-contain">
-        <img src="../assets/rachit-tank-2cFZ_FB08UM-unsplash.jpg" />
-        </div>
-        <h1>Projet</h1>
+    <div className="w-full relative">
+      <div className="w-full h-[350px] bg-blue-300">
+        <img
+          src="https://picsum.photos/id/46/4000/4000"
+          alt="placehold.co"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      <h1 className="text-black text-center text-2xl p-4 font-extrabold">Projet 1</h1>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
