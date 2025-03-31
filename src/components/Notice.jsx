@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react";
 
-function Notice(props) {
+function Notice({ image, nom, description }) {
   return (
-      <div class="bg-white shadow rounded-lg grid grid-cols-2">
-        <div class="rounded-lg">
-          <img src={props.image} alt="Produit 1" class="w-full h-48 object-cover"/> 
-        </div>
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-800">{props.nom}</h3>
-          <p class="text-gray-600 mt-2">{props.avis}</p>
-        </div>
+    <div class=" w-[300px] h-[200px] m-6 p-4 rounded-lg flex flex-row items-center border-2 shadow-md  hover:bg-slate-100 hover:scale-105 transition duration-300 cursor-pointer">
+      <div class="flex flex-col w-1/2 gap-4 justify-center items-center">
+        <img src={image} alt="" class="rounded-full  h-[100px] w-[100px]" />
+        <p class="text-lg underline">{nom}</p>
       </div>
-  )
+
+      <p class="p-4">{description}</p>
+    </div>
+  );
 }
 
-export default Notice
+export default Notice;

@@ -1,56 +1,69 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Product from "./components/Product";
 import Notice from "./components/Notice";
-import Footer from "./components/Footer";
+import Product from "./components/Product";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
 
-      <div class="container mx-auto px-6 py-16">
-        <h2 class="text-2xl font-bold text-gray-800">Témoignages</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
-          <Notice
-            image="./assets/guy-6309458_1280.jpg"
-            nom="Pierre"
-            avis="Bon produit"
-          />
-          <Notice
-            image="./assets/girl-2961959_1280.jpg"
-            nom="Mary"
-            avis="Bon design"
-          />
-          <Notice
-            image="./assets/man-1867175_1280.jpg"
-            nom="Thomas"
-            avis="Très bien"
-          />
-          <Notice
-            image="./assets/woman-2112292_1280.jpg"
-            nom="Adeline"
-            avis="Incroyable"
-          />
-        </div>
+      <Header lien1="Produits" lien2="Témoignages" lien3="Contact" lien4="A propos" />
+      <Hero />
+      {/* Produits */}
+      <h2 className="m-8 text-start text-2xl font-bold" id="produits">Produits</h2>
+      <div class="flex flex-wrap justify-center gap-6" >
+        <Product
+          src="https://picsum.photos/id/23/240/160"
+          productName="Pomme"
+          productBrand="Fruits"
+          prix="23"
+        />
+        <Product
+          src="https://picsum.photos/id/33/240/160"
+          productName="Poire"
+          productBrand="Fruits"
+          prix="18"
+        />
+        <Product
+          src="https://picsum.photos/id/25/240/160"
+          productName="Fraise"
+          productBrand="Fruits rouges"
+          prix="28"
+        />
+        <Product
+          src="https://picsum.photos/id/26/240/160"
+          productName="Kiwi"
+          productBrand="Fruits"
+          prix="22"
+        />
+        <Product
+          src="https://picsum.photos/id/27/240/160"
+          productName="Mangue"
+          productBrand="Fruits"
+          prix="29"
+        />
+        <Product
+          src="https://picsum.photos/id/28/240/160"
+          productName="Melon"
+          productBrand="Fruits"
+          prix="20"
+        />
+      </div>
+      {/* Notice */}
+      <h2 className="m-8 text-start text-2xl font-bold" id="temoignages">Témoignages</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <Notice image="https://picsum.photos/id/35/100/100" nom="John Doe" description="Super produit ! Je recommande !"/>
+        <Notice image="https://picsum.photos/id/36/100/100" nom="Jane Dae" description="Problème de qualité."/>
+        <Notice image="https://picsum.photos/id/38/100/100" nom="Joe Due" description="Satisfaisant !"/>
+        <Notice image="https://picsum.photos/id/39/100/100" nom="June Dune" description="Je viens de le recevoir ! Super !"/>
       </div>
 
-      <main class="container mx-auto px-6 py-8">
-        <h2 class="text-2xl font-bold text-gray-800">Nos Produits</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-          <Product image="./assets/agriculture-1846358_1280.jpg" />
-          <Product image="./assets/grapes-3638444_1280.jpg" />
-          <Product image="./assets/raspberries-2431029_1280.jpg" />
-          <Product image="./assets/strawberries-3431122_1280.jpg" />
-          <Product image="./assets/ai-generated-7725925_1280.jpg" />
-          <Product image="./assets/cherries-7952771_1280.jpg" />
-        </div>
-      </main>
-
-      <Footer />
+      {/* Footer */}
+      <Footer/>
+      
     </div>
   );
 }

@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
 function Hero() {
   return (
- 
-<div class="container mx-auto text-center">
-  <p>Tous les produits sont arrivés !!!</p>
-  <div class = "grid justify-items-center grid-cols-1">
-  {/* <img src="./assets/rachit-tank-2cFZ_FB08UM-unsplash.jpg" alt="Produit 1" class = "h-screen"/>  */}
-  </div>
-</div>
-
-
-
-  )
+    <div className="w-full relative">
+      <div className="w-full h-[350px] bg-blue-300">
+        <img
+          src="https://picsum.photos/id/46/4000/4000"
+          alt="placehold.co"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      <h1 className="text-black text-center text-2xl p-4 font-extrabold">Projet 1</h1>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;
